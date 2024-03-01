@@ -1,0 +1,154 @@
+\documentclass[a4paper]{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+\usepackage[left=0.65in,right=0.65in,bottom=0.8in,top=0.8in]{geometry}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [5] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 $\cdot$ #3 $\cdot$ #4 $\cdot$ #5
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\newcommand{\courses} [1] {
+    \textbf{Relevant Courses:} #1 \\
+}
+
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+    {\Huge \scshape {Mohamad Radaideh}}\\
+    \texttt{EMAIL} $\vert$ \texttt{PHONENUMBER} $\vert$ \texttt{LinkedIn - Mohamad Radaideh} $\vert$ \texttt{GitHub - momo674}
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Carleton University}\hfill Ottawa, ON\\
+Honours B.CS in Computer Science | \textbf{GPA: 4.0} \hfill  - May 2026\\
+\courses{Data Structures and Algorithms (Java), Intro to Software Engineering (C++), Systems Programming, Database Management Systems, Web Application Development, Geomatic Programming }
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Kinaxis} \hfill Ottawa, ON\\
+\textit{Software Developer - Algorithms} \hfill January 2024 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+
+    \item Directed Marvin testing, guaranteeing software adaptability and performance in critical edge cases, thereby boosting the product's flexibility.
+    \item Modernized the company's supply chain analytics in C++ by redeveloping core algorithms, achieving a 30\% boost in efficiency and accuracy.
+    \item Developed a logical testing framework enabling the creation of NUnit test cases in C\#, significantly improving the quality assurance process. 
+    \item Collaborated Closely with Scrum Team in Agile Environment to Streamline Project Delivery, tracking progress using Git and Jira.
+    \item Crafted comprehensive test cases in Google Test for feature updates and bug fixes, elevating software quality and substantially improving stability and performance.
+\end{itemize}
+\textbf{Virgin Plus} \hfill Ottawa, ON\\
+\textit{Technical Support Assistant} \hfill August 2023 - December 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Addressed mobile, internet, and TV service problems, significantly enhancing customer satisfaction.
+    \item Collaborated with network engineers to troubleshoot complex 5G connectivity issues, contributing to enhanced network reliability and performance.
+    \item 
+Acquired proficiency in specialized diagnostic software, streamlining troubleshooting processes and reducing service resolution time by 20\%.
+\end{itemize}
+\textbf{uPrep Academy} \hfill Remote\\
+\textit{Program Developer} \hfill May 2023 - Aug 2023\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Developed a Python-based 'Intro to Programming' course tailored for high school students, delivering content to 1000+ beginners.
+    \item Uploaded essential course materials like lecture notes, assignments, and class schedules onto Moodle for easy access and organization.
+\end{itemize}
+
+
+
+\header{Projects}
+\vspace{1mm}
+
+{\textbf{University Scheduling Tool} | Java, MySQL, JavaFX}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Implemented an interactive scheduling tool for university courses, allowing students and administrators to manage semester-based time tables.
+    \item Utilized Java and MySQL to manage user data and course information, enhancing system reliability and user satisfaction.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Ottawa Weather Chatroom} | JavaScript, HTML/CSS, Node.js, Next.js}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Designed and implemented a weather-focused chatroom web application for Ottawa, leveraging Node.js and Express.js for robust backend functionality.
+    \item Integrated OpenWeatherMap API with backend server, allowing users to share and discuss weather conditions in real-time, enhancing community engagement.
+\end{itemize}
+\vspace*{2mm}
+
+{\textbf{Automated Tim Hortons Order} | Python, Selenium, GoogleMapsAPI, AWS}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Crafted an automation server for handling Tim Hortons orders which places an order on the user's behalf if near a desired location.
+    \item Leveraged Python alongside the Selenium Library to automate coffee ordering processes, dynamically adjusting to the user's live mobile location through integration with the Google Maps API.
+\end{itemize}
+\vspace*{2mm}
+
+\header{Technical Skills}
+\begin{tabular}{ l l }
+    \textbf{Programming Languages:} & Java, C/C++, JavaScript, Python, C\#, SQL, R         \\
+    \textbf{Technologies: }         & HTML/CSS, JSON, Node.js, MongoDB, SQLite, Linux, Git \\
+\end{tabular}
+\vspace{2mm}
+\end{document}
